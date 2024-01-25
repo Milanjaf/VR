@@ -10,12 +10,14 @@
   <body>
     <a-scene>
 
-      <img id="m" src="./raie.jpg">
-      <img id="s" src="./water.jpg">
-      <img id="m2" src="./requin.jpeg">
-      <img id="m3" src="./tortues.jpg">
-      <img id="r1" src="./boule.jpg">
-      <img id="r2" src="./raie.jpg">
+      <a-assets>
+          <img id="m" src="./raie.jpg">
+          <img id="s" src="./water.jpg">
+          <img id="m2" src="./requin.jpeg">
+          <img id="m3" src="./tortues.jpg">
+          <img id="r1" src="./boule.jpg">
+          <img id="r2" src="./raie.jpg">
+      </a-assets>
 
       <!-- Définition du mixin -->
 
@@ -44,8 +46,7 @@
       <a-entity mixin="mur3f" position="-1.75 0.7 2"></a-entity>
       <a-entity mixin="mur3p" position="-1 0.7 1.75"></a-entity>
       <a-entity mixin="mur3f" position="-1.75 0.7 0"></a-entity>
-      <a-entity mixin="mur3f" position="-1.75 0.7 -0.5"></a-entity>
-      <a-entity mixin="mur2f" position="-1.75 0.7 -0.51"></a-entity>
+
       <a-entity mixin="rideau2f" position="-1.75 0.7 -1.5"></a-entity>
 
 
@@ -82,12 +83,10 @@
       <a-entity mixin="rideau2p" position="1 0.7 1.25"></a-entity>
 
       <a-entity mixin="mur3p" position="-2 0.7 0.75"></a-entity>
-      <a-entity mixin="rideau2p" position="-1.5 0.7 0.75"></a-entity>
+
       <a-entity mixin="mur2p" position="0.5 0.7 0.75"></a-entity>
       <a-entity mixin="mur2p" position="1 0.7 0.75"></a-entity>
-      <a-entity mixin="mur2p" position="1.5 0.7 0.75"></a-entity>
-      <a-entity mixin="mur3p" position="1.51 0.7 0.75"></a-entity>
-
+    
       
 
       <a-entity mixin="mur3p" position="-2 0.7 -0.25"></a-entity>
@@ -111,8 +110,8 @@
       <a-entity mixin="mur3p" position="-1.5 0.7 0.25"></a-entity>
       <a-entity mixin="mur3p" position="-1.01 0.7 0.25"></a-entity>
       <a-entity mixin="mur2p" position="-1 0.7 0.25"></a-entity>
-      <a-entity mixin="rideau2p" position="-0.51 0.7 0.25"></a-entity>
-      <a-entity mixin="rideau1p" position="-0.5 0.7 0.25"></a-entity>
+ 
+
       <a-entity mixin="mur2p" position="0.51 0.7 0.25"></a-entity>
       <a-entity mixin="murp" position="0.5 0.7 0.25"></a-entity>
       <a-entity mixin="mur2p" position="1 0.7 0.25"></a-entity>
@@ -128,8 +127,7 @@
       <a-entity mixin="mur3p" position="1.01 0.7 -1.25"></a-entity>
 
       <a-entity mixin="mur3p" position="-2 0.7 -1.75"></a-entity>
-      <a-entity mixin="rideau2p" position="-0.5 0.7 -1.75"></a-entity>
-      <a-entity mixin="rideau2p" position="1 0.7 -1.75"></a-entity>
+  
 
       <a-entity mixin="sol" position="0 -0.8 0"></a-entity>
       <a-entity mixin="sol" position="0 2.2 0"></a-entity>
@@ -148,30 +146,28 @@
       <a-entity mixin="mur3f" position="1.25 0.7 -1.5"></a-entity>
 
       <a-entity mixin="mur3f" position="0.75 0.7 2"></a-entity>
-      <a-entity mixin="rideau2f" position="0.75 0.7 1.51"></a-entity>
-      <a-entity mixin="rideau1f" position="0.75 0.7 1.5"></a-entity>
+
 
       <a-entity mixin="mur3f" position="0.25 0.7 2"></a-entity>
       <a-entity mixin="mur3f" position="0.25 0.7 1.51"></a-entity>
       <a-entity mixin="mur2f" position="0.25 0.7 1.5"></a-entity>
       <a-entity mixin="mur2f" position="0.25 0.7 1"></a-entity>
-      <a-entity mixin="rideau2f" position="0.25 0.7 0.51"></a-entity>
-      <a-entity mixin="rideau1f" position="0.25 0.7 0.5"></a-entity>
-      <a-entity mixin="rideau2f" position="0.25 0.7 -0.51"></a-entity>
-      <a-entity mixin="rideau1f" position="0.25 0.7 -0.5"></a-entity>
+
+ 
+     
       <a-entity mixin="mur2f" position="0.25 0.7 -1.5"></a-entity>
 
       <a-entity mixin="mur3f" position="-0.25 0.7 2"></a-entity>
-      <a-entity mixin="rideau2f" position="-0.25 0.7 1.5"></a-entity>
+
       <a-entity mixin="mur2f" position="-0.25 0.7 1"></a-entity>
-      <a-entity mixin="mur2f" position="-0.25 0.7 0.51"></a-entity>
-      <a-entity mixin="murf" position="-0.25 0.7 0.5"></a-entity>
+  
+   
       <a-entity mixin="murf" position="-0.25 0.7 -0.5"></a-entity>
       <a-entity mixin="mur2f" position="-0.25 0.7 -0.51"></a-entity>
-      <a-entity mixin="mur2f" position="-0.25 0.7 -1.5"></a-entity>
+
 
       <a-entity mixin="mur3f" position="-0.75 0.7 2"></a-entity>
-      <a-entity mixin="rideau2f" position="-0.75 0.7 1"></a-entity>
+
       <a-entity mixin="mur3f" position="-0.75 0.7 1.5"></a-entity>
       <a-entity mixin="mur2f" position="-0.75 0.7 0.5"></a-entity>
       <a-entity mixin="mur2f" position="-0.75 0.7 -1"></a-entity>
@@ -181,7 +177,7 @@
       <a-entity mixin="mur3f" position="-1.25 0.7 2"></a-entity>
       <a-entity mixin="mur3f" position="-1.25 0.7 1.01"></a-entity>
       <a-entity mixin="mur2f" position="-1.25 0.7 1"></a-entity>
-      <a-entity mixin="rideau2f" position="-1.25 0.7 0.5"></a-entity>
+
       <a-entity mixin="mur3f" position="-1.25 0.7 -0.5"></a-entity>
       <a-entity mixin="mur2f" position="-1.25 0.7 -0.51"></a-entity>
 
@@ -190,8 +186,8 @@
       <a-entity mixin="mur3p" position="-1 0.7 1.75"></a-entity>
       <a-entity mixin="mur3f" position="-1.75 0.7 0"></a-entity>
       
-      <a-entity mixin="mur2f" position="-1.75 0.7 -0.51"></a-entity>
-      <a-entity mixin="rideau2f" position="-1.75 0.7 -1.5"></a-entity>
+     
+
 
 
 
@@ -224,25 +220,24 @@
       <a-entity mixin="mur3p" position="-1.5 0.7 1.25"></a-entity>
       <a-entity mixin="mur3p" position="-0.51 0.7 1.25"></a-entity>
       <a-entity mixin="mur2p" position="-0.5 0.7 1.25"></a-entity>
-      <a-entity mixin="rideau2p" position="1 0.7 1.25"></a-entity>
+    
 
       <a-entity mixin="mur3p" position="-2 0.7 0.75"></a-entity>
-      <a-entity mixin="rideau2p" position="-1.5 0.7 0.75"></a-entity>
+    
       <a-entity mixin="mur2p" position="0.5 0.7 0.75"></a-entity>
       <a-entity mixin="mur2p" position="1 0.7 0.75"></a-entity>
-      <a-entity mixin="mur2p" position="1.5 0.7 0.75"></a-entity>
-      <a-entity mixin="mur3p" position="1.51 0.7 0.75"></a-entity>
+   
 
       <a-entity mixin="mur3p" position="-2 0.7 0.25"></a-entity>
       <a-entity mixin="mur3p" position="-1.5 0.7 0.25"></a-entity>
       <a-entity mixin="mur3p" position="-1.01 0.7 0.25"></a-entity>
       <a-entity mixin="mur2p" position="-1 0.7 0.25"></a-entity>
-      <a-entity mixin="rideau2p" position="-0.51 0.7 0.25"></a-entity>
-      <a-entity mixin="rideau1p" position="-0.5 0.7 0.25"></a-entity>
+  
+   
       <a-entity mixin="mur2p" position="0.51 0.7 0.25"></a-entity>
       <a-entity mixin="murp" position="0.5 0.7 0.25"></a-entity>
       <a-entity mixin="mur2p" position="1 0.7 0.25"></a-entity>
-      <a-entity mixin="rideau1p" position="1.5 0.7 0.25"></a-entity>
+  
       
 
       <a-entity mixin="mur3p" position="-2 0.7 -0.25"></a-entity>
@@ -255,8 +250,7 @@
       <a-entity mixin="mur3p" position="1.51 0.7 -0.25"></a-entity>
 
       <a-entity mixin="mur2p" position="-2 0.7 -0.75"></a-entity>
-      <a-entity mixin="rideau2p" position="-0.51 0.7 -0.75"></a-entity>
-      <a-entity mixin="rideau1p" position="-0.5 0.7 -0.75"></a-entity>
+   
       <a-entity mixin="murp" position="0 0.7 -0.75"></a-entity>
       <a-entity mixin="mur2p" position="0.01 0.7 -0.75"></a-entity>
       <a-entity mixin="mur2p" position="0.5 0.7 -0.75"></a-entity>
@@ -272,11 +266,12 @@
       <a-entity mixin="mur3p" position="1.01 0.7 -1.25"></a-entity>
 
       <a-entity mixin="mur3p" position="-2 0.7 -1.75"></a-entity>
-      <a-entity mixin="rideau2p" position="-0.5 0.7 -1.75"></a-entity>
-      <a-entity mixin="rideau2p" position="1 0.7 -1.75"></a-entity>
+
 
       <a-sky src="./iglooo.png"></a-sky>
 
-    </a-scene>
+      <a-entity camera="active: true" look-controls wasd-controls="acceleration:10" position="0 1.6 0"></a-entity>
+   
+  
   </body>
 </html>
