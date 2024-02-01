@@ -1,275 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
- 
     <script
-      src="https://aframe.io/releases/1.2.0/aframe.min.js"
-    ></script>
 
+      src="https://aframe.io/releases/1.2.0/aframe.min.js"
+
+    ></script>
   </head>
   <body>
-    <a-scene>
+   <a-scene>
 
       <a-assets>
+        
+<!-- images -->
           <img id="m" src="./raie.jpg">
+
           <img id="s" src="./water.jpg">
+
           <img id="m2" src="./requin.jpeg">
+
           <img id="m3" src="./tortues.jpg">
+
           <img id="r1" src="./boule.jpg">
-          <img id="r2" src="./raie.jpg">
+
+          <img id="r2" src="./raie.jpg">    
+
       </a-assets>
 
-      <!-- Définition du mixin -->
+<!-- Définition du mixin -->
 
       <a-mixin id="sol" geometry="width: 0.01; height:4 ; depth: 4"  rotation="0 0 90" material="src: #s" repeat="4 4"></a-mixin>
-      <a-mixin id="murf" geometry="width: 0.01; height: 3; depth: 0.5"  rotation="0 90 0" material="src: #m"></a-mixin>
-      <a-mixin id="murp" geometry="width: 0.01; height: 3; depth: 0.5"  rotation="0 0 0" material="src: #m"></a-mixin>
-      <a-mixin id="mur2f" geometry="width: 0.01; height: 3; depth: 0.5"  rotation="0 90 0" material="src: #m2"></a-mixin>
+    
       <a-mixin id="mur2p" geometry="width: 0.01; height: 3; depth: 0.5"  rotation="0 0 0" material="src: #m2"></a-mixin>
-      <a-mixin id="mur3f" geometry="width: 0.01; height: 3; depth: 0.5"  rotation="0 90 0" material="src: #m3"></a-mixin>
-      <a-mixin id="mur3p" geometry="width: 0.01; height: 3; depth: 0.5"  rotation="0 0 0" material="src: #m3"></a-mixin>
-      <a-mixin id="rideau1f" geometry="width: 0.01; height: 3; depth: 0.5"  rotation="0 90 0" material="src: #r1" transparent="all"></a-mixin>
-      <a-mixin id="rideau1p" geometry="width: 0.01; height: 3; depth: 0.5"  rotation="0 0 0" material="src: #r1" transparent="all"></a-mixin>
-      <a-mixin id="rideau2f" geometry="width: 0.01; height: 3; depth: 0.5"  rotation="0 90 0" material="src: #r2" transparent="all"></a-mixin>
-      <a-mixin id="rideau2p" geometry="width: 0.01; height: 3; depth: 0.5"  rotation="0 0 0" material="src: #r2" transparent="all"></a-mixin>
 
-      <!-- Utilisation du mixin pour créer un cube -->
+      <a-mixin id="mur3p" geometry="width: 0.01; height: 3; depth: 0.5"  rotation="0 0 0" material="src: #m3"></a-mixin> 
 
-      <a-entity mixin="mur3f" position="-1.25 0.7 2"></a-entity>
-      <a-entity mixin="mur3f" position="-1.25 0.7 1.01"></a-entity>
-      <a-entity mixin="mur2f" position="-1.25 0.7 1"></a-entity>
-      <a-entity mixin="rideau2f" position="-1.25 0.7 0.5"></a-entity>
-      <a-entity mixin="mur3f" position="-1.25 0.7 -0.5"></a-entity>
-      <a-entity mixin="mur2f" position="-1.25 0.7 -0.51"></a-entity>
-
-
-      <a-entity mixin="mur3f" position="-1.75 0.7 2"></a-entity>
-      <a-entity mixin="mur3p" position="-1 0.7 1.75"></a-entity>
-      <a-entity mixin="mur3f" position="-1.75 0.7 0"></a-entity>
-
-      <a-entity mixin="rideau2f" position="-1.75 0.7 -1.5"></a-entity>
-
-
-
-      <a-entity mixin="mur3f" position="1.75 0.7 -2"></a-entity>
-      <a-entity mixin="mur3f" position="1.25 0.7 -2"></a-entity>
-      <a-entity mixin="mur2f" position="0.75 0.7 -2"></a-entity>
-      <a-entity mixin="mur2f" position="0.25 0.7 -2"></a-entity>
-      <a-entity mixin="mur2f" position="-0.25 0.7 -2"></a-entity>
-      <a-entity mixin="mur3f" position="-0.75 0.7 -2"></a-entity>
-      <a-entity mixin="mur3f" position="-1.25 0.7 -2"></a-entity>
+      <a-mixin id="mur2f" geometry="width: 0.01; height: 3; depth: 0.5"  rotation="0 90 0" material="src: #m2"></a-mixin>
    
+      <a-mixin id="mur3f" geometry="width: 0.01; height: 3; depth: 0.5"  rotation="0 90 0" material="src: #m3"></a-mixin>
+      
+<!-- sol -->
+      <a-entity mixin="sol" position="0 -0.8 0"></a-entity>
+
+<!-- plafond -->
+       <a-entity mixin="sol" position="0 2.2 0"></a-entity>
 
 
+      
+      <a-entity mixin="mur2p" position="0.5 0.7 -1.25"></a-entity>
+      <a-entity mixin="mur2p" position="1 0.7 -1.25"></a-entity>
+      <a-entity mixin="mur2p" position="-0.5 0.7 1.25"></a-entity>
+      <a-entity mixin="mur2p" position="0.5 0.7 0.75"></a-entity>
+      <a-entity mixin="mur2p" position="1 0.7 0.75"></a-entity>
+      <a-entity mixin="mur2p" position="-1 0.7 0.25"></a-entity>
+      <a-entity mixin="mur2p" position="0.5 0.7 0.25"></a-entity>
+      <a-entity mixin="mur2p" position="1 0.7 0.25"></a-entity>
+      <a-entity mixin="mur2p" position="1.5 0.7 -0.25"></a-entity>  
+      <a-entity mixin="mur2p" position="-1 0.7 -0.25"></a-entity>
+      <a-entity mixin="mur2p" position="-0.51 0.7 -0.25"></a-entity>
+      <a-entity mixin="mur2p" position="0.01 0.7 -0.75"></a-entity>
+      <a-entity mixin="mur2p" position="0.5 0.7 -0.75"></a-entity>
+      <a-entity mixin="mur2p" position="-2 0.7 -1.25"></a-entity>
+      <a-entity mixin="mur2p" position="-1.51 0.7 -1.25"></a-entity>
+      <a-entity mixin="mur2p" position="-0.5 0.7 -1.25"></a-entity>
+      <a-entity mixin="mur2p" position="0.5 0.7 -1.25"></a-entity>
+      <a-entity mixin="mur2p" position="1 0.7 -1.25"></a-entity>
+      <a-entity mixin="mur2p" position="-2 0.7 -0.75"></a-entity>
 
+ <!-- mur de droite et mur de gauche  -->
+      <a-entity mixin="mur3p" position="-2 0.7 0.75"></a-entity>
+      <a-entity mixin="mur3p" position="-2 0.7 -0.25"></a-entity>
+      <a-entity mixin="mur3p" position="-1.01 0.7 -0.25"></a-entity>
+      <a-entity mixin="mur3p" position="1.5 0.7 -0.25"></a-entity>
+      <a-entity mixin="mur3p" position="-2 0.7 0.25"></a-entity>
+      <a-entity mixin="mur3p" position="-1.5 0.7 0.25"></a-entity>
+      <a-entity mixin="mur3p" position="-1.01 0.7 0.25"></a-entity>
+      <a-entity mixin="mur3p" position="-1.5 0.7 -1.25"></a-entity>
+      <a-entity mixin="mur3p" position="-0.51 0.7 -1.25"></a-entity>
+      <a-entity mixin="mur3p" position="1.0 0.7 -1.25"></a-entity>
+      <a-entity mixin="mur3p" position="-2 0.7 -1.75"></a-entity>
+      <a-entity mixin="mur3p" position="-1.5 0.7 -1.25"></a-entity>
+      <a-entity mixin="mur3p" position="-0.51 0.7 -1.25"></a-entity>
+      <a-entity mixin="mur3p" position="1.01 0.7 -1.25"></a-entity>
+      <a-entity mixin="mur3p" position="-2 0.7 -1.75"></a-entity>
+      <a-entity mixin="mur3p" position="1.01 0.7 -1.25"></a-entity>
+      <a-entity mixin="mur3p" position="-2 0.7 -1.75"></a-entity>
       <a-entity mixin="mur3p" position="2 0.7 1.75"></a-entity>
       <a-entity mixin="mur3p" position="2 0.7 1.25"></a-entity>
-
       <a-entity mixin="mur3p" position="2 0.7 0.25"></a-entity>
       <a-entity mixin="mur3p" position="2 0.7 -0.25"></a-entity>
       <a-entity mixin="mur3p" position="2 0.7 -0.75"></a-entity>
       <a-entity mixin="mur3p" position="2 0.7 -1.25"></a-entity>
       <a-entity mixin="mur3p" position="2 0.7 -1.75"></a-entity>
-
       <a-entity mixin="mur3p" position="-2 0.7 1.75"></a-entity>
       <a-entity mixin="mur3p" position="-2 0.7 1.75"></a-entity>
       <a-entity mixin="mur3p" position="0 0.7 1.75"></a-entity>
       <a-entity mixin="mur3p" position="1 0.7 1.75"></a-entity>
-
       <a-entity mixin="mur3p" position="-2 0.7 1.25"></a-entity>
       <a-entity mixin="mur3p" position="-1.5 0.7 1.25"></a-entity>
       <a-entity mixin="mur3p" position="-0.51 0.7 1.25"></a-entity>
-      <a-entity mixin="mur2p" position="-0.5 0.7 1.25"></a-entity>
-      <a-entity mixin="rideau2p" position="1 0.7 1.25"></a-entity>
-
+      <a-entity mixin="mur3p" position="-1 0.7 1.75"></a-entity>
       <a-entity mixin="mur3p" position="-2 0.7 0.75"></a-entity>
-
-      <a-entity mixin="mur2p" position="0.5 0.7 0.75"></a-entity>
-      <a-entity mixin="mur2p" position="1 0.7 0.75"></a-entity>
-    
-      
-
-      <a-entity mixin="mur3p" position="-2 0.7 -0.25"></a-entity>
-      <a-entity mixin="mur3p" position="-1.01 0.7 -0.25"></a-entity>
-      <a-entity mixin="mur2p" position="-1 0.7 -0.25"></a-entity>
-      <a-entity mixin="mur2p" position="-0.51 0.7 -0.25"></a-entity>
-      <a-entity mixin="murp" position="-0.5 0.7 -0.25"></a-entity>
-      <a-entity mixin="mur2p" position="0.51 0.7 -0.25"></a-entity>
-      <a-entity mixin="murp" position="0.5 0.7 -0.25"></a-entity>
-      <a-entity mixin="mur2p" position="1.5 0.7 -0.25"></a-entity>
-      <a-entity mixin="mur3p" position="1.51 0.7 -0.25"></a-entity>
-
-      <a-entity mixin="mur2p" position="-2 0.7 -0.75"></a-entity>
-      <a-entity mixin="rideau2p" position="-0.51 0.7 -0.75"></a-entity>
-      <a-entity mixin="rideau1p" position="-0.5 0.7 -0.75"></a-entity>
-      <a-entity mixin="murp" position="0 0.7 -0.75"></a-entity>
-      <a-entity mixin="mur2p" position="0.01 0.7 -0.75"></a-entity>
-      <a-entity mixin="mur2p" position="0.5 0.7 -0.75"></a-entity>
-     
       <a-entity mixin="mur3p" position="-2 0.7 0.25"></a-entity>
       <a-entity mixin="mur3p" position="-1.5 0.7 0.25"></a-entity>
-      <a-entity mixin="mur3p" position="-1.01 0.7 0.25"></a-entity>
-      <a-entity mixin="mur2p" position="-1 0.7 0.25"></a-entity>
- 
-
-      <a-entity mixin="mur2p" position="0.51 0.7 0.25"></a-entity>
-      <a-entity mixin="murp" position="0.5 0.7 0.25"></a-entity>
-      <a-entity mixin="mur2p" position="1 0.7 0.25"></a-entity>
-      <a-entity mixin="rideau1p" position="1.5 0.7 0.25"></a-entity>
-      
-      <a-entity mixin="mur2p" position="-2 0.7 -1.25"></a-entity>
-      <a-entity mixin="mur2p" position="-1.51 0.7 -1.25"></a-entity>
+      <a-entity mixin="mur3p" position="-1 0.7 0.25"></a-entity>
+      <a-entity mixin="mur3p" position="-2 0.7 -0.25"></a-entity>
+      <a-entity mixin="mur3p" position="-1.0 0.7 -0.25"></a-entity>
       <a-entity mixin="mur3p" position="-1.5 0.7 -1.25"></a-entity>
-      <a-entity mixin="mur3p" position="-0.51 0.7 -1.25"></a-entity>
-      <a-entity mixin="mur2p" position="-0.5 0.7 -1.25"></a-entity>
-      <a-entity mixin="mur2p" position="0.5 0.7 -1.25"></a-entity>
-      <a-entity mixin="mur2p" position="1 0.7 -1.25"></a-entity>
-      <a-entity mixin="mur3p" position="1.01 0.7 -1.25"></a-entity>
-
+      <a-entity mixin="mur3p" position="-0.5 0.7 -1.25"></a-entity>
+      <a-entity mixin="mur3p" position="1 0.7 -1.25"></a-entity>
       <a-entity mixin="mur3p" position="-2 0.7 -1.75"></a-entity>
-  
+      <a-entity mixin="mur3p" position="1.5 0.7 -0.25"></a-entity>
 
-      <a-entity mixin="sol" position="0 -0.8 0"></a-entity>
-      <a-entity mixin="sol" position="0 2.2 0"></a-entity>
 
+<!-- autres murs extérieurs -->
+      <a-entity mixin="mur2f" position="0.75 0.7 -2"></a-entity>
+      <a-entity mixin="mur2f" position="0.25 0.7 -2"></a-entity>
+      <a-entity mixin="mur2f" position="-0.25 0.7 -2"></a-entity>
+      <a-entity mixin="mur2f" position="-1.25 0.7 1"></a-entity>
+      <a-entity mixin="mur2f" position="-1.25 0.7 -0.51"></a-entity>
+      <a-entity mixin="mur2f" position="1.25 0.7 1"></a-entity>
+      <a-entity mixin="mur2f" position="1.25 0.7 -0.49"></a-entity>
+      <a-entity mixin="mur2f" position="0.25 0.7 1.5"></a-entity>
+      <a-entity mixin="mur2f" position="0.25 0.7 1"></a-entity>
+      <a-entity mixin="mur2f" position="0.25 0.7 -1.5"></a-entity>
+      <a-entity mixin="mur2f" position="-0.25 0.7 1"></a-entity>
+      <a-entity mixin="mur2f" position="-0.25 0.7 -0.51"></a-entity>
+      <a-entity mixin="mur2f" position="-0.75 0.7 0.5"></a-entity>
+      <a-entity mixin="mur2f" position="-0.75 0.7 -1"></a-entity>
+      <a-entity mixin="mur2f" position="-1.25 0.7 1"></a-entity>
+      <a-entity mixin="mur2f" position="-1.25 0.7 -0.51"></a-entity>
+      <a-entity mixin="mur2f" position="0.75 0.7 -2"></a-entity>
+      <a-entity mixin="mur2f" position="0.25 0.7 -2"></a-entity>
+      <a-entity mixin="mur2f" position="-0.25 0.7 -2"></a-entity>
+
+<!-- mur de devant et mur de derrière  -->
       <a-entity mixin="mur3f" position="1.75 0.7 2"></a-entity>
       <a-entity mixin="mur3f" position="1.75 0.7 1.5"></a-entity>
       <a-entity mixin="mur3f" position="1.75 0.7 0.5"></a-entity>
       <a-entity mixin="mur3f" position="1.75 0.7 -1"></a-entity>
-
       <a-entity mixin="mur3f" position="1.25 0.7 2"></a-entity>
       <a-entity mixin="mur3f" position="1.25 0.7 1.01"></a-entity>
-      <a-entity mixin="mur2f" position="1.25 0.7 1"></a-entity>
-      <a-entity mixin="mur2f" position="1.25 0.7 -0.49"></a-entity>
+      <a-entity mixin="mur3f" position="-0.75 0.7 -1.01"></a-entity>
+      <a-entity mixin="mur3f" position="-0.75 0.7 -1.5"></a-entity>
+      <a-entity mixin="mur3f" position="-1.25 0.7 2"></a-entity>
+      <a-entity mixin="mur3f" position="-1.25 0.7 1.01"></a-entity>
+      <a-entity mixin="mur3f" position="-0.75 0.7 2"></a-entity>
+      <a-entity mixin="mur3f" position="-0.75 0.7 1.5"></a-entity>
+      <a-entity mixin="mur3f" position="-0.25 0.7 2"></a-entity>
       <a-entity mixin="mur3f" position="1.25 0.7 -0.5"></a-entity>
       <a-entity mixin="mur3f" position="1.25 0.7 -1"></a-entity>
       <a-entity mixin="mur3f" position="1.25 0.7 -1.5"></a-entity>
-
       <a-entity mixin="mur3f" position="0.75 0.7 2"></a-entity>
-
-
       <a-entity mixin="mur3f" position="0.25 0.7 2"></a-entity>
       <a-entity mixin="mur3f" position="0.25 0.7 1.51"></a-entity>
-      <a-entity mixin="mur2f" position="0.25 0.7 1.5"></a-entity>
-      <a-entity mixin="mur2f" position="0.25 0.7 1"></a-entity>
-
- 
-     
-      <a-entity mixin="mur2f" position="0.25 0.7 -1.5"></a-entity>
-
-      <a-entity mixin="mur3f" position="-0.25 0.7 2"></a-entity>
-
-      <a-entity mixin="mur2f" position="-0.25 0.7 1"></a-entity>
-  
-   
-      <a-entity mixin="murf" position="-0.25 0.7 -0.5"></a-entity>
-      <a-entity mixin="mur2f" position="-0.25 0.7 -0.51"></a-entity>
-
-
-      <a-entity mixin="mur3f" position="-0.75 0.7 2"></a-entity>
-
-      <a-entity mixin="mur3f" position="-0.75 0.7 1.5"></a-entity>
-      <a-entity mixin="mur2f" position="-0.75 0.7 0.5"></a-entity>
-      <a-entity mixin="mur2f" position="-0.75 0.7 -1"></a-entity>
-      <a-entity mixin="mur3f" position="-0.75 0.7 -1.01"></a-entity>
-      <a-entity mixin="mur3f" position="-0.75 0.7 -1.5"></a-entity>
-
-      <a-entity mixin="mur3f" position="-1.25 0.7 2"></a-entity>
-      <a-entity mixin="mur3f" position="-1.25 0.7 1.01"></a-entity>
-      <a-entity mixin="mur2f" position="-1.25 0.7 1"></a-entity>
-
-      <a-entity mixin="mur3f" position="-1.25 0.7 -0.5"></a-entity>
-      <a-entity mixin="mur2f" position="-1.25 0.7 -0.51"></a-entity>
-
-
-      <a-entity mixin="mur3f" position="-1.75 0.7 2"></a-entity>
-      <a-entity mixin="mur3p" position="-1 0.7 1.75"></a-entity>
-      <a-entity mixin="mur3f" position="-1.75 0.7 0"></a-entity>
-      
-     
-
-
-
-
-      <a-entity mixin="mur3f" position="1.75 0.7 -2"></a-entity>
-      <a-entity mixin="mur3f" position="1.25 0.7 -2"></a-entity>
-      <a-entity mixin="mur2f" position="0.75 0.7 -2"></a-entity>
-      <a-entity mixin="mur2f" position="0.25 0.7 -2"></a-entity>
-      <a-entity mixin="mur2f" position="-0.25 0.7 -2"></a-entity>
       <a-entity mixin="mur3f" position="-0.75 0.7 -2"></a-entity>
       <a-entity mixin="mur3f" position="-1.25 0.7 -2"></a-entity>
       <a-entity mixin="mur3f" position="-1.75 0.7 -2"></a-entity>
+      <a-entity mixin="mur3f" position="-1.75 0.7 0"></a-entity>
+      <a-entity mixin="mur3f" position="1.75 0.7 -2"></a-entity>
+      <a-entity mixin="mur3f" position="1.25 0.7 -2"></a-entity>
+      <a-entity mixin="mur3f" position="-1.25 0.7 -0.5"></a-entity>
+      <a-entity mixin="mur3f" position="-1.75 0.7 2"></a-entity>
+      <a-entity mixin="mur3f" position="-1.25 0.7 -0.5"></a-entity>
+      <a-entity mixin="mur3f" position="-1.75 0.7 2"></a-entity>
+      <a-entity mixin="mur3f" position="-1.25 0.7 2"></a-entity>
+      <a-entity mixin="mur3f" position="-1.25 0.7 1.01"></a-entity>
+      <a-entity mixin="mur3f" position="-1.75 0.7 0"></a-entity>
+      <a-entity mixin="mur3f" position="1.75 0.7 -2"></a-entity>
+      <a-entity mixin="mur3f" position="1.25 0.7 -2"></a-entity>
 
-
-
-      <a-entity mixin="mur3p" position="2 0.7 1.75"></a-entity>
-      <a-entity mixin="mur3p" position="2 0.7 1.25"></a-entity>
-
-      <a-entity mixin="mur3p" position="2 0.7 0.25"></a-entity>
-      <a-entity mixin="mur3p" position="2 0.7 -0.25"></a-entity>
-      <a-entity mixin="mur3p" position="2 0.7 -0.75"></a-entity>
-      <a-entity mixin="mur3p" position="2 0.7 -1.25"></a-entity>
-      <a-entity mixin="mur3p" position="2 0.7 -1.75"></a-entity>
-
-      <a-entity mixin="mur3p" position="-2 0.7 1.75"></a-entity>
-      <a-entity mixin="mur3p" position="-2 0.7 1.75"></a-entity>
-      <a-entity mixin="mur3p" position="0 0.7 1.75"></a-entity>
-      <a-entity mixin="mur3p" position="1 0.7 1.75"></a-entity>
-
-      <a-entity mixin="mur3p" position="-2 0.7 1.25"></a-entity>
-      <a-entity mixin="mur3p" position="-1.5 0.7 1.25"></a-entity>
-      <a-entity mixin="mur3p" position="-0.51 0.7 1.25"></a-entity>
-      <a-entity mixin="mur2p" position="-0.5 0.7 1.25"></a-entity>
-    
-
-      <a-entity mixin="mur3p" position="-2 0.7 0.75"></a-entity>
-    
-      <a-entity mixin="mur2p" position="0.5 0.7 0.75"></a-entity>
-      <a-entity mixin="mur2p" position="1 0.7 0.75"></a-entity>
-   
-
-      <a-entity mixin="mur3p" position="-2 0.7 0.25"></a-entity>
-      <a-entity mixin="mur3p" position="-1.5 0.7 0.25"></a-entity>
-      <a-entity mixin="mur3p" position="-1.01 0.7 0.25"></a-entity>
-      <a-entity mixin="mur2p" position="-1 0.7 0.25"></a-entity>
-  
-   
-      <a-entity mixin="mur2p" position="0.51 0.7 0.25"></a-entity>
-      <a-entity mixin="murp" position="0.5 0.7 0.25"></a-entity>
-      <a-entity mixin="mur2p" position="1 0.7 0.25"></a-entity>
-  
-      
-
-      <a-entity mixin="mur3p" position="-2 0.7 -0.25"></a-entity>
-      <a-entity mixin="mur3p" position="-1.01 0.7 -0.25"></a-entity>
-      <a-entity mixin="mur2p" position="-1 0.7 -0.25"></a-entity>
-      <a-entity mixin="mur2p" position="-0.51 0.7 -0.25"></a-entity>
-    
-      <a-entity mixin="murp" position="0.5 0.7 -0.25"></a-entity>
-      <a-entity mixin="mur2p" position="1.5 0.7 -0.25"></a-entity>
-      <a-entity mixin="mur3p" position="1.51 0.7 -0.25"></a-entity>
-
-      <a-entity mixin="mur2p" position="-2 0.7 -0.75"></a-entity>
-   
-      <a-entity mixin="murp" position="0 0.7 -0.75"></a-entity>
-      <a-entity mixin="mur2p" position="0.01 0.7 -0.75"></a-entity>
-      <a-entity mixin="mur2p" position="0.5 0.7 -0.75"></a-entity>
-     
-      
-      <a-entity mixin="mur2p" position="-2 0.7 -1.25"></a-entity>
-      <a-entity mixin="mur2p" position="-1.51 0.7 -1.25"></a-entity>
-      <a-entity mixin="mur3p" position="-1.5 0.7 -1.25"></a-entity>
-      <a-entity mixin="mur3p" position="-0.51 0.7 -1.25"></a-entity>
-      <a-entity mixin="mur2p" position="-0.5 0.7 -1.25"></a-entity>
-      <a-entity mixin="mur2p" position="0.5 0.7 -1.25"></a-entity>
-      <a-entity mixin="mur2p" position="1 0.7 -1.25"></a-entity>
-      <a-entity mixin="mur3p" position="1.01 0.7 -1.25"></a-entity>
-
-      <a-entity mixin="mur3p" position="-2 0.7 -1.75"></a-entity>
-
-
+<!-- ciel -->
       <a-sky src="./iglooo.png"></a-sky>
 
+      
+<!-- vitesse de marche -->
       <a-entity camera="active: true" look-controls wasd-controls="acceleration:10" position="0 1.6 0"></a-entity>
    
   
