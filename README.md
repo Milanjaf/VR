@@ -4,3 +4,4 @@
 *[labyrinthe](labyrinthe4.html)
 *[obj](obj.html)
 *[lumière](lumière.html)
+*[bazar](whatamess.html)
