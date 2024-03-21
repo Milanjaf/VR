@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=iDvWGBrHDI6YycwX11CtYaZvds5UDuTqNi1fKqklkAVsRPLFj1uKkLLFUgHm09iiTzHy7rdULZwU2B8w9UECqKN1iBiMaaG_DyQlrTRHrDqX-HuOLU7nohdkOLVcLHtbgijExcf6nqh2rTq-OSSCHJ-NU-oaZBj6NOpT86Wj9A5jxHJn6a6yrYsMJPjonFuds2bz-IQ-kdb229u0jdfkj5CN23K_4yR5O2ecK3Jk9Z1TD2PmExcHASyqp1tc3yFGMDRhMycSWwewogGKGes6x1VPWBxame4368W27lPUmBJ3KsiqeUcUuxCB40UlpQSdk8Xrxx6fYa5ZPQ3p7PfbDwk4Nr_nUvaqSAasn6pwAXPAPP0krIv1dc85f0RBtApcKgSErV5pNZAgbyv0BGUflsELnT254i31YaWMWbDwosVsSF1aGqrvrm_8spByPxHhei0vC0YhEkGg23s1dGKG0e_5MALnig0Wn4hr5FNql4vQ_M55jJa60E7btPfoNBMlcUzfwEdYBzAQGZ8kw-RpG6-e-PdiugAApwlIyLbhDRJNfUiRM40ceTT8Ebd8gPQEWfmWqixvR2nUxHh5waa08DDcWCIVZA3EInqc-NIjX-i0c78KbaseDLvLmc9oIg0XmwUDQWvBkcPVG24HBszxT_wZVhzRHeJwBxrXBjvTBP29oz4fPHfvxCO6gWS1Cuqont7p0jRFUfHzTMHUYX-Nxwn7fdQHcSqPVOaXQ2FSPrHdj-QNzkyxf8yf8bG5Fuf4Q3VJDmVWP3v9SVf1QHDRThhPbLYEm67QC0Fx31DmYMVIDJIwdTTJ3WQyLt9pLNtgpcVGxCB_7qi_EXdycM8IK25P4AvGL57tgYWt_C67hb5EEhajtcPnJea_lUG3b0Uik6k69B4f_frRkGj2e1q-RIE3mKnl3aaWvrIX6O6aj6dbKONfNiTMC3qYRRtiKbVtQv05lyTIY93KTxAdBVwoVQCQhdT3M9T1TiTB4qyX02SsE2OYmT_T55HDrKwDnkrkdnmejTYtkBNtfgBlmJqFmHHirfIZDHdaPJIRBYjjhD1lJFGcQ8du97JPu3ERg9QDRtQK8ad1Xp0Mdzqf02gNfV_pL7xo1bTc0_0BzT7NkbcPM-flfb2m5TodhEHpyb26mKylUKChBMD_F5D8ud8g0x1E5QW3cIcd7AI-C3n_FYwHnU8Q1EE93003SqWmj78AsR2ZJ0pkmt0Wn1ZXENSLLK9EEEsPMXV3znR-CuuSoB3uyvr14k6yaEPnlGNSQHX_zv553xDxcCdVWcnzfMw9R5OvciiVrjVVgGIWQHuaqwY22dpwOXJXv6tyB3e-9tdiSnAO-WIlGiw1HbCnuzmxbY1okO8Jnjzd-ZQUpETNnc1oKL37R6-vT2aSLxOCq8oOD2LNNe2wQ6RgXS1IKnqTKpsYJBkc9lJhoUkVaz3FYhjlklrjUTkkfDc_Cqh_bcLAAt1jf-otn_TVgYk_IOUXP52MRt4NLik4PiYKrR-y7JKKx2UbqCDHqw9oeIUiFWLdMDr4032sAUNc-zB6CkFBm9eo46pBdHSmvdwUE8k0pa3iNwS9ublzv9xUgosxMFLS_tAcModfQFolwBwN-FYuunEMuMH5UsGt94_9xq8cYhFwLRqGBK3eSwVXoxs7wg63A5Aws35oUUrCdy3UcqcK2mDXqarrfJSbVfhOJWCe0zIvipjiRuf5vp_ke93sK_55U204D1vxtYdG6KMPF9Hr1F31aWlfz3NW4tpon2R5sl4" nonce="9afda2dd4c2b862fa08f333316cef312" charset="UTF-8"></script><script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+         <!-- assets -->
+        <a-asset-item id="maquette" src="./maquette2.glb"></a-asset-item>
+       
+
+        <!-- camera -->
+        <a-entity camera="" look-controls="" wasd-controls="acceleration:10; fly:true" position="0 1 0" rotation=""></a-entity>
+
+       
+        <!-- objet -->
+        <a-entity gltf-model="#maquette" position="0 -1 -5" scale="20 20 20"></a-entity>
+
+       
+        <!-- null1 -->
+        <a-sphere position="0 2 -4" radius="2" color="white" opacity="0" animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 500;">
+        
+       
+        <!-- lumière n 1-->
+        <a-entity light="type: point; intensity: 2; distance: 50; decay: 2; color: #FFB600" position="10 10 0"></a-entity>
+
+          
+        <!-- null2 -->
+        <a-sphere position="0 2 -4" radius="2" color="black" opacity="0" animation="property: rotation; from: 0 360 0; to: 0 0 0; loop: true; dur: 2000;">
+      
+
+        <!-- lumière n 1 -->
+      <a-entity light="type: point; intensity: 2; distance: 50; decay: 2; color: #2CA496" position="0 10 10"></a-entity>
+
+          
+    </a-scene>
+  </body>
+</html>
